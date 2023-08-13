@@ -1,0 +1,7 @@
+model{
+    for(i in 1:length(X)){
+    X[i] ~ dbern(p)
+    }
+    
+    p ~ dbeta(3, 100)
+}

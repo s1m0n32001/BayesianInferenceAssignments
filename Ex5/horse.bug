@@ -1,0 +1,11 @@
+model{
+
+    # Observables
+    for(i in 1:n){
+        X[i] ~ dpois(lambda);
+    }
+    
+    # Uniform prior
+    lambda ~ dbeta(1,1);
+
+}

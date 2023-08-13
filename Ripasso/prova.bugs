@@ -1,0 +1,7 @@
+model{
+for(i in 1:length(X)){
+    X[i] ~ dbern(p);
+    }
+p ~ dbeta(1, 1);
+y ~ dbinom(p, n_samples);
+}

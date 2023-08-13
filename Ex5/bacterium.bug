@@ -1,0 +1,11 @@
+model{
+
+    # Observable (number of contaminated samples) follows a binomial distribution
+    for(i in 1:n){
+        X[i] ~ dbern(p);
+    }
+    
+    # Beta(1,10) prior
+    p ~ dbeta(1,10);
+
+}
